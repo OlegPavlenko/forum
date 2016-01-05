@@ -1,0 +1,46 @@
+<div class="logo">
+  <h1><a href=""><%= @hat.title %></a></h1>
+  <h2>"Hello, /b/ro!"</h2>
+</div>
+<hr>
+<ul class="threads-list clearfix">
+  <li><a class="thread" href="/">
+    <h2>Home</h2>
+  </a></li>
+  <% @hats.each do |hat| %>
+    <li><a class="thread" href="/hats/<%= hat.id %>">
+      <h2><%= hat.title %></h2>
+    </a></li>
+  <% end %>
+</ul>
+<hr>
+</header>
+<section class="posts">
+  <article class="hat" id="hat">
+    <%= markdown @hat.content %>
+  </article>
+  <%= render @hat.posts %>
+</section>
+<hr>
+<footer>
+  <div class="form">
+    <a id="reply-btn" href="#">Reply to thread</a>
+    <%= render 'posts/form' %>
+  </div>
+  <hr>
+  <ul class="threads-list clearfix">
+    <li><a class="thread" href="/">
+      <h2>Home</h2>
+    </a></li>
+    <% @hats.each do |hat| %>
+      <li><a class="thread" href="/hats/<%= hat.id %>">
+        <h2><%= hat.title %></h2>
+      </a></li>
+    <% end %>
+  </ul>
+  <hr>
+  <p class="info">
+    Все права и копирайты на этой странице принадлежат правообладателям. За любую размещенную информацию несет личную ответственность постер (лицо, загрузившее эту информацию). Все комментарии принадлежат лицам, отправившим их.
+    Если вы обнаружили информацию, размещённую против правил, пожалуйста, сообщите нам об этом.
+  </p>
+</footer>

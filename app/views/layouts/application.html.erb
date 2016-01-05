@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Forum</title>
+  <link href='https://fonts.googleapis.com/css?family=Ubuntu:500&subset=latin,cyrillic' rel='stylesheet' type='text/css'>
+	<link href='https://fonts.googleapis.com/css?family=Nunito:700' rel='stylesheet' type='text/css'>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+
+  <div class="wrapper">
+  		<header>
+  			<div class="adminbar">
+  				<ul class="nav clearfix">
+  					<li><a href="">Настройка</a></li>
+  					<li><a href="">Mobile</a></li>
+  					<li><a href="">Контакты</a></li>
+  					<li><a href="">NSFW</a></li>
+  					<li><a href="">Избранное</a></li>
+  					<li><a href="">Пожертвования</a></li>
+  					<li><a href="">Купить пасскод</a></li>
+  					<li><a href="">Pics</a></li>
+  					<li><a href="">API</a></li>
+  					<li>
+  						<select name="layout" placeholder="Macaba"} id="">
+  							<option value="macaba" selected="true">Macaba</option>
+  						</select>
+  					</li>
+  				</ul>
+  			</div>
+  			<hr>
+        <%= yield %>
+		  </section>
+	  </div>
+</body>
+</html>

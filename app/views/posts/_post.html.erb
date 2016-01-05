@@ -1,0 +1,7 @@
+<article class="post">
+  <div class="name"><%= post.name %></div>
+  <div class="created"><%= post.created_at.strftime("%d %b. %Y") %></div>
+  <div class="id">#<%= post.id %></div>
+  <h3><%= post.theme %></h3>
+  <%= markdown post.post %>
+</article>
